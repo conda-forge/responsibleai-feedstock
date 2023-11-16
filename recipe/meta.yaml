@@ -1,5 +1,5 @@
 {% set name = "responsibleai" %}
-{% set version = "0.31.0" %}
+{% set version = "0.32.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/responsibleai-{{ version }}.tar.gz
-  sha256: 350f30c8aea886321501a02176e2b5ac19863dbfd94ba84c03ae1d72559d07aa
+  sha256: c08a94da709de4509191b5e88d553b7ad83eac4bc2df842a60ca4c532bbc1fe0
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
 requirements:
@@ -20,7 +20,7 @@ requirements:
     - pip
   run:
     - python >=3.6
-    - dice-ml >=0.10,<0.11
+    - dice-ml >=0.11,<0.12
     - econml >=0.14.1
     - statsmodels <0.14.0
     - jsonschema
