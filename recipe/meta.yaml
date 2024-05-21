@@ -1,5 +1,5 @@
 {% set name = "responsibleai" %}
-{% set version = "0.35.0" %}
+{% set version = "0.35.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/responsibleai-{{ version }}.tar.gz
-  sha256: 5bac773b562dd738e0624e694a6e6705e7ae96c04e7dbc6ff4db280de4acd496
+  sha256: 82fea8423d0fa8f929ce2e08fc73c9a9ddeeda420c7a4ae32056503b98657616
 
 build:
   noarch: python
